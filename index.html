@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <style>
+       
+
+        :root {
+            --bg-pink: #FFF0F5;
+            --container-bg: #FFFFFF;
+            --text-color: #3D3D3D;
+            --header-color: #C75D86;
+            --scrollbar-thumb: #D185A6;
+            --scrollbar-track: #FCE9F2;
+            --shadow-color: rgba(99, 58, 77, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cal Sans', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-pink);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+            font-weight: 300;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-thumb);
+            border-radius: 20px;
+            border: 2px solid var(--scrollbar-track);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--header-color);
+        }
+
+        .story-wrapper {
+            max-width: 840px;
+            width: 100%;
+            background: var(--container-bg);
+            border-radius: 16px;
+            box-shadow: 0 15px 40px -10px var(--shadow-color);
+            padding: 50px 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .story-wrapper.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .story-content h1, .story-content h2 {
+            font-weight: 600;
+            color: var(--header-color);
+            text-align: center;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .story-content h1 {
+            font-size: 2.5rem;
+            margin-top: 40px;
+        }
+
+        .story-content h1:first-child {
+            margin-top: 0;
+        }
+
+        .story-content h2 {
+            font-size: 2rem;
+            margin-top: 50px;
+            border-bottom: none;
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5em;
+            text-align: justify;
+            text-indent: 2em;
+            letter-spacing: 0.2px;
+            hyphens: auto;
+        }
+        
+        .story-content h1 + p:first-of-type, 
+        .story-content h2 + p:first-of-type {
+            text-indent: 0;
+        }
+
+        .story-content p:empty {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            .story-wrapper {
+                padding: 35px 30px;
+            }
+            .story-content h1 {
+                font-size: 2rem;
+            }
+            .story-content h2 {
+                font-size: 1.7rem;
+            }
+            .story-content p {
+                font-size: 1rem;
+                text-align: left;
+                text-indent: 1.5em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+             .story-wrapper {
+                padding: 25px 20px;
+            }
+            .story-content h1 {
+                font-size: 1.6rem;
+            }
+             .story-content h2 {
+                font-size: 1.4rem;
+            }
+             .story-content p {
+                font-size: 0.95rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="story-wrapper">
+        <div class="story-content">
+            <h1>Bab 1: Wajah Ganteng, Dompet Kosong</h1>
+            <p>Nama gue Rangga. Orang-orang pikir gue anak orang kaya cuma karena kulit gue putih dan mata gue cokelat terang. Ada yang bilang gue bule nyasar, ada juga yang sirik karena gue “kelihatan ganteng padahal miskin.” Nyatanya gue lebih sering senyum ke kasir Indomaret sambil nanya promo daripada ke orang lain.</p>
+            <p>Gue lahir dari rahim seorang wanita kuat yang nyaris kehilangan akal sehatnya, tujuh bulan sebelum gue lahir. Nyokap gue, orang paling tangguh yang pernah gue kenal, pernah jadi saksi mata ketika suaminya ditembak mati di depan matanya sendiri oleh rentenir. Ayah gue, kata orang-orang, tampan, bule, tapi juga penjudi ulung. Bukannya ninggalin warisan, dia malah ninggalin trauma, utang, aib, dan mungkin sepeda gowes yang pedalnya copot sebelah.</p>
+            <p>Gue tumbuh di rumah petakan yang dindingnya bisa dengerin rahasia tetangga. Tiap pagi, nyokap masak seadanya, dan gue, si ‘bule’ dengan celana bekas dan sepatu robek, udah siap-siap buat ngelilingin komplek bawa tumpukan majalah butut yang gue desain sendiri. Kadang gue jualan di lampu merah, kadang di depan sekolah lain. Receh demi receh gue kumpulin bukan cuma buat jajan, tapi buat mastiin adik gue, Natasya, bisa sekolah dengan tenang.</p>
+            <p>Dan di sekolah, ironi itu makin menjadi-jadi. Wajah Eropa, tapi isi kantong lokal. Gue jadi bahan cibiran paling kreatif. Gue diem, dibilang sok misterius. Gue maju presentasi, satu kelas malah bingung dengar cara gue ngomong yang masih cadel. Gue ngucap kata ‘kontrol’ malah jadi ‘k****l’ dan seisi kelas auto ketawa. Sejak saat itu, gue sadar kalau lebih baik nelan ludah daripada nelan hinaan. Sekolah jadi rutinitas: masuk, duduk, kepleset, pulang, terus ngumpet lagi.</p>
+            <p>Gue kira hidup gue bakal selamanya seabu-abu itu. Cuma figuran tak terlihat yang nasibnya sering keinjek-injek. Sampai akhirnya, dia muncul.</p>
+            
+            <h1>Bab 2: Pandangan Pertama dengan Beliau</h1>
+            <p>Namanya Nazwa. Dia itu kayak... wifi gratis di tengah kuota sekarat. Nggak rame, nggak banyak gaya, tapi adem banget diliat. Senyumnya nggak lebay, tapi cukup buat bikin jantung gue yang biasanya mager jadi lari maraton.</p>
+            <p>Bahagia versi gue itu receh, Bro. Pernah guru nyuruh gue bagiin buku paket, pas gue kasih ke dia, dia noleh sambil senyum tipis, "Makasih yaa." Dua kata. Cuma dua kata, tapi efeknya ke gue udah kayak dapet jackpot lotre. Seharian gue senyum-senyum sendiri kayak orang tolol.</p>
+            <p>Ada juga momen absurd lainnya pas jam kosong. Guru nggak masuk, kelas udah kayak pasar Tanah Abang. Gue, saking gabutnya dan males ikut ngegosip, iseng gambar trollface gede-gede di sampul belakang buku tulis. Lengkap, dengan senyum nyengir legendaris dan tulisan "Problem?" di bawahnya.</p>
+            <p>Pas gue lagi khusyuk ngewarnain giginya pake Tipe-X, Nazwa nggak sengaja noleh ke belakang. Matanya nangkep gambar gue. Awalnya dia diem, kayak lagi nge-loading. Terus... bibirnya mulai ketarik ke atas.</p>
+            <p>Dia nggak nahan ketawa. Dia ketawa lepas, Cok. Tawa yang bikin matanya jadi segaris kayak emoji 'XD', tulus banget. Gue, si Rangga anak cadel yang kalo presentasi malah bikin satu kelas bingung, ternyata bisa bikin seorang Nazwa ketawa ngakak. Anjir, rasanya lebih bahagia daripada dapet giveaway skin Mobile Legends.</p>
+            <p>Ada lagi momen absurd yang gue simpen rapi di folder 'Kenangan Tak Terlupakan' di otak gue. Pas istirahat, ada kupu-kupu item nyasar masuk kelas, entah dari kebon sekolah atau dari dimensi lain. Itu kupu-kupu nemplok di punggung tangan Nazwa. Dia agak takut, mukanya panik-panik gemes.</p>
+            <p>Jiwa iseng gue langsung meronta. Gue samperin, terus dengan muka sok tau kayak di acara Dunia Binatang, gue bilang, "Eh, ati-ati, Naz. Itu kupu-kupu jenis Papilio Memnon. Serbuk di sayapnya kalo kena kulit bisa bikin gatel-gatel seminggu, katanya ada racunnya."</p>
+            <p>Muka paniknya itu, asli, nggak ada obat! Dia langsung niup-niupin tangannya, celingak-celinguk nyari wastafel, heboh banget kayak abis kesenggol knalpot. Gue di pojokan cuma bisa nahan senyum sampe perut gue keram. Goblok emang, tapi kebohongan kecil gue hari itu bikin dunia gue yang biasanya abu-abu jadi full HD 4K.</p>
+            <p>Tapi yang paling gila, paling aneh, sekaligus paling indah, itu pas insiden musholla. Jam istirahat, anak-anak lagi pada lari-larian main 'polisi-maling' versi kearifan lokal. Gue entah kenapa malah jadi korban salah tangkep dan kejebak di dalem musholla sendirian.</p>
+            <p>Dan lo tau siapa yang iseng ngunci pintunya dari luar? Dia.</p>
+            <p>Iya, Nazwa, sambil cekikikan bareng sirkelnya, Naila dan Keyla. "Eh, Rangga lagi diklat jadi marbot!" teriak salah satu dari mereka, diiringi tawa yang kedengeran sampe dalem.</p>
+            <p>Gue nggak marah, Bro. Sumpah. Di dalem musholla yang agak remang dan bau karpet apek itu, sendirian, gue malah... seneng. Aneh kan? Gue sampe sujud syukur boongan, terus doa dalem hati, "Ya Allah, kalo bisa jangan dikeluarin cepet-cepet."</p>
+            <p>Diprank sama cewek yang lo suka itu ternyata candu, ya.</p>
+            <p>Itu hal-hal kecil yang bikin gue ngerasa, yah... hidup gue nggak se-abu-abu itu. Semua itu gara-gara dia. Momen-momen receh itu jadi bensin buat gue, jadi alasan kenapa gue rela jualan majalah di tengah terik matahari.</p>
+            <p>Tapi gue sadar, gue bukan satu-satunya yang ngerasa begitu.</p>
+            <p>Ada Zidan. Cowok pendiem di pojok kelas yang matanya nggak pernah lepas dari Nazwa. Pernah sekali gue liat, pas jam istirahat, Zidan coba nyamperin Nazwa, tangannya gemeteran sambil nyodorin gantungan kunci kecil buatannya sendiri. Tapi pas itu, Nazwa lagi asik ketawa-ketawa sama temen-temennya, jadi dia cuma noleh sekilas sambil bilang, "Eh, iya, makasih ya," terus balik lagi ngobrol.</p>
+            <p>Zidan cuma bisa diem, mukanya kaku, terus balik ke bangkunya pelan-pelan. Gantungan kunci itu nggak pernah gue liat lagi. Mungkin disimpen, atau mungkin... dibuang.</p>
+            <p>Gue liat tatapan mata Zidan hari itu. Dingin. Sejak saat itu, dia jadi makin pendiam, dan tiap kali gue nggak sengaja papasan sama dia, tatapannya ke gue rasanya beda. Kayak ada kebencian yang lagi disimpen rapi.</p>
+            <p>Gue nggak ngerti kenapa. Mungkin karena gue, si bule kere, kadang bisa bikin Nazwa ketawa lepas cuma gara-gara gambar trollface, sementara usahanya yang tulus malah nggak dapet perhatian.</p>
+            <p>Ah, sudahlah. Pikiran anak SMP emang kadang lebih rumit dari rumus fisika.</p>
+            <p>Gue cuma nggak tau, kalau kekecewaan kecil hari itu bakal jadi bensin yang ngebakar semuanya.</p>
+
+            <h2>Bab yang Ditulis Ulang: Badai Setelah Badai</h2>
+            <p>Sebelum gue lanjut ke cerita SMP yang isinya lebih banyak drama daripada sinetron azab, gue harus ajak lo mampir bentar ke panggung terakhir kami sebagai bocah. Panggung kelulusan SD. Hari di mana semua seragam merah-putih kami yang udah kucel dan penuh coretan Tipe-X akhirnya dipensiunkan dengan hormat.</p>
+            <p>Acara formalnya, ya gitu-gitu aja. Duduk di aula sekolah yang panasnya kayak di dalem oven, dengerin kepala sekolah pidato soal "generasi penerus bangsa" yang templatenya kayaknya nggak pernah di-update sejak zaman Majapahit. Gue sih cuma setengah dengerin, pikiran gue udah melayang ke mana-mana, terutama ke sosok yang duduk di barisan cewek-cewek, nggak jauh dari gue.</p>
+            <p>Nazwa. Hari itu dia keliatan beda. Cantik banget, pake kerudung yang rapi dan senyumnya... lepas. Sama sekali nggak ada beban.</p>
+            <p>Nah, drama sesungguhnya dimulai pas acara selesai. Beberapa anak yang otaknya lebih encer dari es teh manis, punya ide buat ngadain acara perpisahan sendiri. Bukan di sekolah, tapi di salah satu kafe murah meriah yang lagi nge-hits. Katanya, sih, biar lebih memorable.</p>
+            <p>Jadilah kami semua di sana. Suasananya udah kayak pasar kaget yang dikasih speaker jedag-jedug. Ada si Azka yang lagi ngerjain Adit pake saos sambel sampe si Adit nangis-nangis bombay. Ada si Arkan yang lagi serius jelasin teori konspirasi kenapa Upin Ipin nggak pernah naik kelas ke segerombolan anak cowok yang cuma manggut-manggut padahal nggak ngerti. Dan ada gerombolan cewek-cewek, termasuk Naila, yang lagi asik foto-foto buat menuhin feed Instagram dengan caption, "See you on top, guys!"</p>
+            <p>Gue? Gue cuma duduk di pojokan, nyeruput es teh, sambil jadi CCTV berjalan. Ngeliatin semua kekacauan itu dengan senyum tipis. Tiba-tiba, Nazwa, bareng teman-temannya, dateng ke meja gue.</p>
+            <p>"Eh, Rangga, sendirian aja? Nggak gabung?" tanyanya, suaranya ceria kayak biasanya.</p>
+            <p>Jantung gue langsung mode dangdut koplo. "Hehe, lagi ngadem, Naz," jawab gue, sok cool padahal dalem hati udah panik.</p>
+            <p>"Jangan mojok terus, dong. Sini gabung," ajaknya sambil senyum. Anjir. Senyumnya itu, lho. Kayak bonus level di game yang nggak pernah gue duga.</p>
+            <p>Gue akhirnya gabung, duduk di antara mereka, walau lebih banyak diem dan nyimak.</p>
+            <p>Di tengah acara, sesi tukar kado dimulai. Kami semua disuruh bawa kado random, terus diundi. Nah, di sinilah takdir mulai nunjukin sisi humornya yang paling kejam. Kado dari gue, sebuah buku gambar dan pensil warna yang gue beli pake sisa duit jualan majalah, entah gimana ceranya, dapetnya malah si Azka. Dia buka kado gue, terus teriak, "Anjir, dapet alat gambar! Gue disuruh jadi arsitek apa gimana, Rang?" Satu kafe ketawa.</p>
+            <p>Gue cuma bisa nyengir kecut.</p>
+            <p>Dan kado dari Nazwa? Sebuah kotak musik kecil. Yang dapet, salah satu teman ceweknya, Keyla. Dia seneng banget, langsung diputer-puter. Zidan, yang duduk nggak jauh dari situ, cuma ngelirik sekilas tanpa ekspresi berarti, terus balik lagi mainin HP-nya. Nggak ada yang aneh. Semua keliatan normal.</p>
+            <p>Puncak acara, kami semua disuruh nulis kesan dan pesan buat teman-teman di secarik kertas, terus ditempel di mading buatan. Gue liat, hampir semua orang nulis buat Nazwa. "Sukses terus, Naz!", "Jangan lupain kita, ya!". Ada juga tulisan usil dari Azka, "Buat Nazwa, jangan kangen sama ketampanan gue, ya!" yang bikin Nazwa ketawa sambil geleng-geleng kepala.</p>
+            <p>Semuanya terasa hangat, terasa sempurna. Momen perpisahan yang manis, yang gue pengen simpen selamanya.</p>
+            <p>Malam itu, saat kami semua foto bareng buat terakhir kalinya, gue berhasil berdiri nggak jauh dari Nazwa. Nggak ada firasat buruk. Nggak ada tatapan khawatir. Yang ada cuma tawa, candaan, dan janji-janji buatan anak SD buat "tetep sahabatan selamanya".</p>
+            <p>Pas mau pulang, Nazwa sempet nyamperin gue.</p>
+            <p>"Rang, nanti SMP lanjut di mana?" tanyanya.</p>
+            <p>"Belum tau, Naz. Nyari yang deket-deket aja, biar bisa tetep jualan," jawab gue jujur.</p>
+            <p>Dia senyum. "Semangat terus, ya. Tulisan-tulisan mu di majalah itu bagus, lho. Gue diem-diem suka baca."</p>
+            <p>DEG...</p>
+            <p>Sumpah, malem itu rasanya gue pengen kayuh sepeda gue sampe ke bulan.</p>
+            <p>Malam itu, saat gue kayuh sepeda pulang, pujian sederhana dari Nazwa rasanya kayak bensin roket. Tiba-tiba, rasa capek jualan majalah, rasa minder karena miskin, semuanya lenyap. Gue senyum-senyum sendiri sepanjang jalan, sampe dikira orang gila sama tukang nasi goreng di pertigaan.</p>
+            <p>Malam itu, gue tidur dengan perasaan paling optimis sedunia. Gue pikir, masa depan itu cerah. Gue pikir, pertemanan kami bakal abadi.</p>
+            <p>Dan untuk pertama kalinya, semesta kayaknya lagi berpihak sama gue. Pas pengumuman kelulusan dan pembagian SMP, gue liat nama gue dan nama Nazwa ada di daftar sekolah yang sama. Anjir. Gue keterima di SMP favorit yang sama bareng dia. Rasanya kayak menang undian, padahal gue daftar pake jalur prestasi gambar komik di majalah dinding. Gue juga liat ada nama Arkan, Azka sama Naila di daftar itu. Walaupun gue tau kami bakal beda kelas, seenggaknya, gue nggak bakal sendirian banget. Gue masih punya kesempatan buat liat dia.</p>
+            <p>Pergantian dari seragam merah-putih ke biru-putih jadi penanda babak baru yang penuh harapan. Masuk SMP, gue jadi lebih semangat. Gue mulai lebih berani ngobrol, walaupun cadel gue kadang masih suka kambuh. Tapi karena ada Nazwa di sana, rasanya gue punya alasan buat jadi lebih baik.</p>
+            <p>Kami sering nggak sengaja papasan di kantin atau pas upacara. Dia selalu senyum, kadang nyapa duluan, "Eh, Rangga, udah laku berapa majalahnya hari ini?" Candaan-candaan kecil kayak gitu, yang dulu cuma terjadi di kelas kami, sekarang bisa terjadi di koridor sekolah yang lebih besar.</p>
+            <p>Gue jadi punya rutinitas baru yang gue suka banget. Selesai jualan majalah, gue bakal buru-buru ke sekolah, cuma biar bisa liat dia turun dari angkot. Kadang, kalau lagi beruntung, kami pulang bareng, jalan kaki sampai ke gerbang depan sambil ngobrolin hal-hal random, dari tugas yang ngeselin sampai film yang lagi rame. Dunia rasanya sempurna.</p>
+            <p>Di masa-masa inilah, gue mulai ngerasa kalau hidup gue nggak seburuk itu. Mungkin, nasib baik emang beneran ada. Gue makin semangat nabung buat kado itu. Gue pikir, ini waktu yang pas. Gue pengen ngasih dia sesuatu yang spesial, sebagai tanda kalau kehadiran dia di hidup gue itu berarti banget.</p>
+            <p>Waktu terus berjalan, sampe akhirnya kami kelas delapan dan pandemi dateng. Dunia pindah ke layar. Semua kebahagiaan sederhana yang gue rasain itu tiba-tiba dicabut paksa. Gue kehilangan momen-momen papasan di kantin. Gue kehilangan obrolan random pas pulang sekolah. Semua diganti sama centang dua abu-abu dan tatapan canggung di Zoom.</p>
+            <p>Justru di kesepian itulah, ide soal kado itu jadi misi utama gue. Tiap receh hasil jualan majalah, gue kumpulin. Kado ini jadi satu-satunya harapan gue, satu-satunya jembatan yang masih bisa nyambungin gue ke dunia normal, ke dunia di mana gue dan Nazwa masih bisa ketawa bareng.</p>
+            <p>Tapi gue lupa, di dunia digital, keheningan itu cuma jeda sebelum badai dateng.</p>
+            <p>Badai itu datang di bulan Februari. Diawali getaran kecil di HP gue. Sebuah chat panik dari temen sekelas, isinya cuma satu perintah: "Bro, liat IG ini deh."</p>
+            <p>Gue buka. Akun itu pake nama temen sekelas lain, Azka. Cowok yang emang dasarnya usil, jadi awalnya gue pikir paling cuma postingan meme goblok. Tapi pas gue liat postingan terakhirnya... napas gue berhenti.</p>
+            <p>Itu foto absen kelas. Bagian yang di-zoom: wajahnya. Iya, wajah Nazwa. Dengan caption paling vulgar yang pernah gue baca.</p>
+            <p>Anjing.</p>
+            <p>Grup kelas langsung jadi arena tinju. Semua nuduh Azka. Azka sendiri panik, sumpah-sumpah bilang akunnya di-hack. Tapi nggak ada yang percaya. Foto Nazwa udah keburu menyebar, jadi bahan gunjingan.</p>
+            <p>Gue cuma bisa diem, ngepalin tangan. Gue tau ini bukan kerjaan Azka. Ini terlalu licik. Ini niat buat ngehancurkan.</p>
+            <p>Notifikasi grup WhatsApp kelas nggak berhenti geter-geter, isinya udah kayak pasar malam yang kebakaran. Ada yang nge-tag akun Azka rame-rame pake kata-kata paling kasar. Ada yang sok jadi penengah, ngetik "udah guys, jangan gitu," tapi di bawahnya ikutan nge-share ulang postingan itu. Dan yang paling bikin gue muak, ada yang malah jadiin ini bahan lawakan. "Wih, Azka lagi nyari perhatian Nazwa ya?" ketik salah satu temen gue, si Satria, pake emoji ketawa ngakak. Bangsat.</p>
+            <p>Azka sendiri kayaknya udah di ambang kewarasan. Dia bales di grup, kali ini pake voice note, suaranya gemeteran campur emosi.</p>
+            <p>"DEMI ALLAH BUKAN GUE! LO SEMUA GOBLOK APA GIMANA SIH PERCAYA GITUAN? LIAT AJA ITU AKUN BARU DIBIKIN! GUE LAGI BANTUIN EMAK GUE, MANA SEMPET GUE BIKIN GITUAN?!"</p>
+            <p>Tapi pembelaan dia malah jadi bensin. Ada yang bales, "Halah, gue tau cerita temen gue waktu itu lo nulis surat sok iye ke dia kan?" Ada juga yang lebih parah, "Paling juga lo iri sama Nazwa wkwk"</p>
+            <p>Di tengah semua itu, Nazwa sama sekali nggak muncul. Fotonya masih ada di profil picture grup, senyum manis, nggak tau kalau di dalemnya lagi ada perang dunia yang ngebahas kehormatan dia. Gue coba DM dia, "Naz, lo nggak apa-apa?" Centang dua, abu-abu. Nggak ada balasan. Mungkin dia udah liat, dan sekarang lagi nangis sendirian di kamarnya. Pikiran itu bikin dada gue sesek.</p>
+            <p>Kekacauan ini berlangsung sampe malem. Bahkan ada yang sampe bikin grup baru tanpa Azka, isinya cuma buat ngegosipin dia. Gue, Arkan, sama Naila cuma bisa jadi penonton bisu. Kami tau Azka itu brandal, tapi dia bukan monster. Naila, yang biasanya paling vokal, cuma nge-DM gue, "Gila, ini udah nggak bener, Rang."</p>
+            <p>Dan drama nggak berhenti di situ. Entah dapet nomor dari mana, tiba-tiba Azka nge-DM gue. Bukan di IG, tapi di WhatsApp.</p>
+            <p>"Rang, lo kan yang paling ngerti ginian. Lo percaya kan ini bukan gue?"</p>
+            <p>Gue bales singkat, "Iya, gue percaya."</p>
+            <p>"Terus gue harus gimana, anjing? Semua orang nyerang gue. Bahkan ada yang ngancem mau ngebakar rumah gue."</p>
+            <p>Gue cuma bisa jawab, "Tenangin diri lo dulu. Gue coba cari tau."</p>
+            <p>Tapi apa yang bisa gue lakuin? Gue cuma anak penjual majalah dengan laptop butut. Gue bukan detektif. Tapi malam itu, gue nggak bisa tidur. Folder "Proyek Balas Budi" yang tadinya kosong, sekarang punya isi pertama: screenshot akun palsu Azka, lengkap dengan semua komen kebencian di dalamnya. Ini bukan lagi cuma buat Nazwa. Ini udah jadi perang kami semua.</p>
+            <p>Beberapa hari setelah insiden akun Azka, suasana kelas jadi aneh. Nggak ada lagi candaan goblok di grup. Semua jadi lebih hening, lebih… waspada. Kayak sekelompok orang yang sadar kalau di antara mereka ada satu ular berbisa.</p>
+            <p>Gue liat dengan mata kepala gue sendiri, gimana tatapan-tatapan itu mulai bekerja. Saat Nazwa masuk ke ruang virtual Zoom, yang biasanya disambut "hai awa!", sekarang cuma disambut keheningan. Bisik-bisik di private chat pasti lebih rame dari pasar malam.</p>
+            <p>Nazwa mencoba tetap normal. Gue liat dia masih senyum, tapi senyumnya itu kayak lukisan yang warnanya pudar. Nggak nyampe ke mata. Matanya sering keliatan kosong. Pernah pas kerja kelompok, kami satu tim. Suasananya canggung mampus. Teman-teman yang biasanya rebutan ngobrol sama Nazwa, sekarang lebih banyak ngomongin tugas ke gue. Nazwa cuma sesekali ngasih masukan, suaranya pelan, hampir nggak kedengeran.</p>
+            <p>"Menurut aku, di bagian nisannya bisa kamu cerahin," katanya.</p>
+            <p>Hening sejenak. "Oh, iya. Oke."</p>
+            <p>Udah, gitu doang. Ada dinding kaca tebal banget, misahin dia dari kami semua. Fitnah itu bukan cuma ngerusak nama baik. Fitnah itu ngebunuh koneksi gue sama dia.</p>
+            <p>Gue sempet mikir, mungkin ini akhirnya. Mungkin pelakunya udah puas. Tapi ternyata, itu cuma ketenangan palsu. Itu cuma taktik si dalang buat bikin kami semua lengah. Kayak di film horor, pas lo pikir setannya udah pergi, tiba-tiba dia muncul lagi dari balik pintu kamar mandi dengan cara yang lebih brutal.</p>
+            <p>Serangan berikutnya datang. Siang itu, pas pelajaran online, kolom chat Zoom tiba-tiba jedar-jeder. Akun dengan nama Della ngetik rentetan makian kasar. Kelas hening. Panik. Semua orang saling tuduh di private chat.</p>
+            <p>"Ini pasti dibajak!"</p>
+            <p>"Siapa yang iseng, anjir!"</p>
+            <p>Terus ada yang sok alim, "Della ngomongnya Astaghfirullah banget."</p>
+            <p>Della yang asli, di kotak Zoom-nya, udah nangis kejer. Suaranya nggak kedengeran karena dia di-mute, tapi getaran bahunya udah cukup buat jadi bukti. Grup WhatsApp meledak lagi. Tuduhan, sumpah serapah, semua campur aduk. Gue cuma bisa diem, scrolling sambil nahan gondok. Kali ini, kecurigaan menyebar ke mana-mana, kayak virus. Nggak ada satu nama pun yang bisa ditunjuk, jadi semua orang mulai saling tatap curiga.</p>
+            <p>Malamnya, kepala gue masih ngebul kayak knalpot bajaj. Gue scroll lagi riwayat chat grup yang isinya udah kayak pasar malem kebakaran. Tapi di tengah semua kepanikan itu, gue mulai liat satu pola yang jelas, anjing. Ini bukan lagi sekadar iseng. Ini udah ada sutradaranya. Dan seisi kelas, dengan kecerdasan kolektif yang setara sama ikan cupang, udah nemuin tumbalnya: Azka. Semua jari telunjuk digital langsung nunjuk ke dia. Kenapa? Karena logika anak SMP itu simpel, Cok: Siapa yang paling sering bikin onar, dialah pelakunya.</p>
+            <p>Grup WA kelas sekarang isinya bukan lagi ngebahas Della. Udah ganti topik jadi "Pengadilan Massa Online untuk Azka."</p>
+            <p>Satria: "Gue yakin 100% ini semua kerjaan Azka. Inget kan pas kasus foto Nazwa? Dia kan yang pertama? Terus sekarang dia pake nama Della buat ngacak-ngacak lagi. Mau ngelak gimana lagi coba?"</p>
+            <p>Luna: "Iya, gais! Tadi di Zoom pas nama Della muncul, gue sempet liat di kamera, si Azka kayak senyum-senyum gitu! Sumpah, gue liat!" (Padahal tadi Azka off-cam karena lagi di warteg beli teh botol).</p>
+            <p>Fathir: "Udah, laporin aja ke wali kelas. Biar dipanggil orang tuanya. Bocah kayak gitu harus dikasih pelajaran."</p>
+            <p>Teori konspirasi liar mulai bertebaran. Ada yang bilang Azka dendam sama Nazwa karena cintanya ditolak (padahal Azka naksirnya sama mbak-mbak penjaga kantin). Ada yang bilang Azka iri sama Della karena nilai agamanya lebih bagus. Semuanya ngaco, tapi semua percaya.</p>
+            <p>Bagaimana nasib Azka? Ancur, Bro. Besoknya di sekolah (anggap udah masuk sekolah tatap muka terbatas atau semacamnya), Azka yang biasanya cengengesan dan jadi biang lawakan, sekarang jalannya nunduk. Mukanya pucet. Dia masuk kelas, semua mata langsung ngeliatin dia dengan tatapan campuran jijik, takut, dan penasaran. Dia duduk di bangkunya, tapi nggak ada satu pun temen sebangkunya yang mau deketin. Kayak dia punya kutukan. Pas dia mau minjem pulpen, temen di depannya langsung ngumpetin tempat pensilnya.</p>
+            <p>"Gak bawa pulpen? Salah sendiri," katanya ketus. Bahkan pas istirahat, Azka yang biasanya jadi pusat keramaian, sekarang makan bekal sendirian di pojokan kelas. Gue liatin dari jauh. Ada sekelompok anak cewek yang sengaja ngelewatin mejanya sambil ngomong kenceng-kenceng.</p>
+            <p>"Ih, serem ya. Diem-diem gitu ternyata psikopat."</p>
+            <p>"Jangan-jangan abis ini nama kita yang dipake."</p>
+            <p>Azka cuma diem, tangannya yang megang sendok gemeteran. Gue tau dia bukan pelakunya. Azka itu brandal, iya. Iseng, iya. Tapi dia bukan monster licik kayak gini. Kejahatannya paling banter nyembunyiin sepatu temen atau nempelin permen karet di kursi guru. Ini? Ini levelnya udah beda. Ini mainan psikopat.</p>
+            <p>Gue coba DM dia malemnya. Gue: "Ka, lo nggak apa-apa?"</p>
+            <p>Dia bales cepet, kayak nungguin ada yang nanya. Azka: "Nggak apa-apa gimana, Cok?! Satu sekolah ngeliatin gue kayak gue pembunuh berantai! Nyokap gue dipanggil BK besok. Gue sumpah, Rang, bukan gue!" Azka: "Gue emang goblok, tapi gue nggak sejahat itu, anjing!" Gue cuma bisa bales: "Gue percaya."</p>
+            <p>Tapi kepercayaan gue nggak ada artinya di tengah gerombolan yang udah terlanjur yakin. Dan si pelaku asli? Dia nonton semua ini. Dari kejauhan. Mungkin sambil nyeruput Pop Ice di kantin. Dia berhasil nyiptain kekacauan, bikin seisi kelas saling benci, dan ngejadiin Azka sebagai tameng hidup. Sementara semua orang sibuk nge-bully Azka, dia bebas nyiapin serangan berikutnya.</p>
+            <p>Kecurigaan gue makin kuat ke beberapa orang yang mencurigakan. Zidan yang absennya selalu "pas". Atau mungkin ada orang lain yang lebih pinter nyembunyiin jejaknya? Gue sadar, ini bukan cuma soal nge-hack akun. Ini soal nge-hack pikiran satu kelas. Dan si pelaku... dia berhasil. Dia bikin kita semua jadi monster yang dengan sukarela memangsa temen kita sendiri. Dan gue, si bule kere yang pura-pura bego di kelas, cuma bisa jadi penonton bisu. Untuk saat ini.</p>
+            <p>Sambil nunggu blunder si pelaku, hidup gue tetep jalan di atas rel yang sama. Rel yang udah karatan dan goyang-goyang. Pagi masih buta, gue udah di atas sepeda, nganterin Natasya. Adek gue itu satu-satunya alarm gue yang paling efektif. Kadang dia suka nanya, "Bang, kenapa abang keliatan capek terus?"</p>
+            <p>Gue cuma bisa nyengir. "Kurang tidur, dek. Semalem abang mabar sama setan."</p>
+            <p>Dia ketawa, nggak ngerti kalau abangnya ini emang beneran lagi mabar sama setan, cuma bedanya di dunia digital.</p>
+            <p>Azka udah resmi jadi tumbal. Tiap hari di sekolah, dia jadi target utama circle-circle sok suci yang butuh musuh bersama biar mereka keliatan kompak. Dia didorong di koridor, tasnya disembunyiin, dan namanya ditulis di papan tulis dengan tambahan gelar "Tukang Fitnah". Miris, anjir. Orang yang jadi korban fitnah malah dapet gelar tukang fitnah. Logika dunia emang sering sungsang.</p>
+            <p>Sementara Azka dihajar di dunia nyata, Nazwa dihajar dalam keheningan. Anak-anak yang deket sama dia,kayak Naila dan Arkan,jadi lebih defensif dan diem. Mereka bikin semacam benteng tak terlihat di sekeliling Nazwa. Nggak ada lagi ketawa lepas, nggak ada lagi ngobrol rame di kantin. Semuanya jadi bisik-bisik. Suasana kelas jadi berat, pengap, kayak ruangan yang AC-nya rusak tapi jendelanya juga nggak bisa dibuka.</p>
+            <p>Dan gue? Gue ada di posisi paling aneh. Gue bukan bagian dari circle elite, jadi gue nggak ikut-ikutan nge-bully Azka. Tapi gue juga bukan bagian dari benteng pertahanan Nazwa. Gue cuma... satelit pengamat yang kadang-kadang nyasar masuk orbit.</p>
+            <p>Masalahnya, mulut gue kadang suka nggak sinkron sama otak. Di grup WA, pas Satria nge-share meme muka Azka lagi nangis, gue nggak tahan. Gue: "Lucu, Cok? Ngetawain orang yang lagi ancur gitu?" Satria: "Lah, kenapa lo? Emang bener kan dia pelakunya? Sok jadi pahlawan lo, bule?" Gue: "Gue bukan pahlawan. Gue cuma nggak segoblok itu buat percaya drama murahan kalian. Nuduh orang tanpa bukti itu kerjaan pengecut."</p>
+            <p>Boom. Gue pikir gue keren. Ternyata gue cuma ngasih mereka target baru.</p>
+            <p>Besoknya, pas gue lagi baca buku di pojokan perpus (pura-pura pinter, padahal lagi baca komik di balik buku paket), si Luna sama gerombolannya lewat. "Eh, liat deh," bisik Luna, tapi suaranya sengaja dikencengin biar gue denger. "Itu si 'Bule Pembela'. Kemarin ngebelain Nazwa, sekarang ngebelain Azka. Jangan-jangan dia mastermind-nya, yang ngadu domba kita semua." Temennya nimpali, "Iya, ih. Diem-diem gitu ternyata social justice warrior jalur ghoib ya. Ngeri." Anjing. Julukan baru. "Bule Pembela." Kreatif, tapi bikin pengen gue sleding kepala mereka.</p>
+            <p>Sejak saat itu, tiap kali ada yang ngebahas kasus ini dan gue nggak sengaja lewat, mereka langsung nyeletuk. "Ssst, ada 'Bule Pembela', ntar kita dilaporin." "Woi, Bule, hari ini mau belain siapa lagi? Koruptor di TV sekalian nggak?" Mereka nggak nge-bully gue secara fisik kayak ke Azka. Gaya mereka lebih halus, lebih nusuk. Mereka ngejadiin gue lelucon, karakter sampingan yang aneh. Si bule kere, anak cadel, penjual majalah, yang sekarang punya hobi baru: jadi pengacara gratisan buat orang-orang yang lagi apes.</p>
+            <p>Sialnya, julukan itu malah bikin gue makin keliatan. Tatapan-tatapan itu jadi lebih sering ngarah ke gue. Ada yang curiga, ada yang ngeremehin. Gue jadi makin terisolasi. Gue coba ngobrol sama Nazwa, nyapa pas papasan, tapi dia cuma ngasih senyum tipis yang rasanya lebih dingin dari es batu, terus buru-buru pergi. Seolah-olah deket sama gue itu bakal bikin masalahnya makin runyam.</p>
+            <p>Dan mungkin... dia bener. Di dunia yang gila ini, kadang ngebela orang yang lagi tenggelam itu bukan berarti lo narik dia ke atas. Tapi malah ikut keseret ke dalem lumpur yang sama, terus sama-sama keselek tai.</p>
+            <p>Malam itu, gue beneran di mode shutdown. Energi gue udah lowbatt, nyaris mati total. Gue tatap langit-langit kamar yang bolongnya udah bisa jadi sarang walet. Pikiran gue kosong.</p>
+            <p>Ting! HP gue nyala. Notif dari Arkan. Panjang, anjing. Tumben banget ni anak, biasanya nge-chat iritnya ngalahin emak-emak nawar di pasar.</p>
+            <p>Arkan: "Rang. Gue tau lo lagi mode go-food-tidur-repeat. Tapi gue kepikiran sesuatu yang ganjil banget." Arkan: "Zidan."</p>
+            <p>Cuma satu nama. Tapi cukup bikin gue yang tadinya rebahan jadi duduk.</p>
+            <p>Arkan: "Gue kan sebangku sama dia, Cok. Gue kira dia cuma NPC pendiem yang hobinya napas doang. Tapi tadi... pas anak-anak ngerujak si Azka di kelas, gue nggak sengaja ngintip HP-nya." Arkan: "Galerinya. Penuh screenshot muka Nazwa. Gila. Dari foto profil WA, foto tag-an IG, sampe foto yang gue aja nggak tau dia dapet dari mana. Dan yang paling bikin merinding... pas si Azka hampir mewek, gue liat Zidan senyum. Bukan senyum nahan ketawa, tapi senyum puas kayak abis dapet jackpot."</p>
+            <p>Otak gue langsung nyoba mikir, tapi kayaknya masih loading. Gue: "Halah, paling juga naksir berat doang, Kan. Level bucin akut. Lo tau sendiri bocah kalo naksir suka jadi detektif amatir." Arkan: "Naksir nggak gitu konsepnya, anjing. Ini lebih kayak... ngumpulin data target. Dan dengerin ini: jempolnya di HP lincah banget. Ngetiknya cepet, serius, fokus. Kayak lagi ngatur strategi perang."</p>
+            <p>Gue masih nyoba denial. Nggak mungkin si muka lempeng itu dalangnya. Gue: "Halah, paling juga lagi main Subway Surfer, Cok. Atau mungkin lagi namatin Kodok Zuma pake cheat. Lo nggak tau aja, diem-diem gitu passion-nya jadi pro-gamer game bapak-bapak."</p>
+            <p>Ada jeda tiga detik sebelum Arkan bales. Arkan: "Rang, jempol orang yang lagi main game sama jempol orang yang lagi nyebar fitnah itu beda auranya. Yang satu panik, yang satu... dingin. Dan jempolnya dia tadi, dingin banget."</p>
+            <p>BAM. Anjing. Kata-kata Arkan itu kayak tamparan. Semua kepingan puzzle yang tadinya berserakan di otak gue langsung ketarik magnet. Tatapan dingin Zidan pas ngasih gantungan kunci. Absennya yang selalu pas ada drama. Dan sekarang... senyum iblisnya.</p>
+            <p>Gue: "Bangsat... Jadi beneran dia?" Arkan: "Gue belum bisa bilang 100%. Anggap aja hipotesis. Tapi daripada kita nonjokin angin, mending kita punya satu target buat diintai. Minimal, kalo ada apa-apa lagi, kita tau harus ngeliatin siapa."</p>
+            <p>Pesan terakhir dari Arkan itu kayak nyuntikin kafein langsung ke jantung gue. Arkan: "Jadi, jangan mode pesawat dulu, jingan. Musuh kita mungkin bukan kerumunan random. Musuh kita cuma satu orang. Satu orang yang pinter banget bikin orang lain keliatan kayak penjahat."</p>
+            <p>Malam itu, gue nggak tidur. Bukan karena sedih, tapi karena adrenalin. Otak gue yang tadinya lemot, sekarang kayak dapet upgrade RAM. Rencana si Zidan ini pasti jauh lebih busuk dari yang keliatan. Dia bukan cuma mau bikin kekacauan. Dia mau jadi sutradara dari film kehancuran Nazwa.</p>
+            <p>Dan gue? Gue bukan lagi "Bule Pembela" yang maju modal bacot doang. Kita sekarang punya target. Kita punya nama.</p>
+            <p>Dan si pelaku asli? Gue yakin dia lagi ketawa paling kenceng. Rencananya berhasil sempurna. Azka jadi samsak, Nazwa terisolasi, dan gue? Gue jadi badut baru di sirkus mereka. Semuanya udah di jalur yang dia mau. Menuju kehancuran yang lebih gede. Dan gue, si "Bule Pembela", cuma bisa diem, nahan gondok, sambil mikir... kapan giliran gue yang bener-bener dihajar sampe nggak bisa bangun lagi.</p>
+            <p>Satu-satunya hal yang bikin gue masih waras adalah rutinitas gue di warnet. Di sana, gue bukan lagi Rangga si bule kere. Gue bisa jadi siapa aja. Gue habiskan sisa receh dari jualan majalah bukan buat nge-game, tapi buat ngulik. Gue baca forum-forum gelap, nonton tutorial soal keamanan siber, belajar istilah-istilah yang bunyinya kayak mantra dukun: proxy, VPN, firewall. Gue sadar, di dunia yang makin gila ini, pura-pura bego di sekolah itu penting. Tapi jadi pinter di balik layar, itu keharusan buat bertahan hidup.</p>
+            <p>Selang beberapa minggu abis insiden akun palsu Della, kelas gue jadi kayak kuburan. Heningnya creepy, anjir. Tiap notif WA masuk, satu kelas langsung main lirik-lirikan, kayak lagi audisi jadi agen CIA. Gue kira si biang kerok udah insaf, mungkin lagi khusyuk main Mobile Legends atau nyuci motor Vario bapaknya.</p>
+            <p>Ternyata, imajinasi gue terlalu positif buat negara ini.</p>
+            <p>Dia bukan pensiun. Dia cuma upgrade server. Dari gang sempit nyenggol Instagram, dia pindah ke jalan tol... YouTube.</p>
+            <p>Sore itu, pas gue lagi scroll TikTok nyari tutorial "Cara Ganti Oli Pake Minyak Jelantah," HP gue geter kayak abis kesetrum. DM dari Arkan. Isinya cuma link dan satu kata sakral: "Bangsat."</p>
+            <p>Gue klik.</p>
+            <p>Nama channel-nya... najis, aesthetic banget buat ukuran tukang fitnah: "Satu Keadilan". Fotonya Joker, tapi versi digambar pake arang di bungkus nasi uduk. Video paling anyar, judulnya bikin istighfar: "VIRAL! SISI GELAP SISWI 'ANGEL' BERINISIAL N: POLOS DI STORY, BARBAR DI DM?"</p>
+            <p>Isinya? Anjing, lebih parah dari skripsi. Kompilasi foto-foto Nazwa yang entah dicomot dari Facebook emaknya atau dari mana, diiringi musik piano sedih yang biasanya dipake buat video kucing mati, plus suara mbak-mbak Google Translate.</p>
+            <p>"Diduga, saudari N," kata si suara robot, "memiliki kepribadian ganda. Di sekolah ia dikenal pendiam, namun di dunia maya ia sangat agresif..."</p>
+            <p>Agresif pala bapak kau! Paling agresif Nazwa tuh pas rebutan promo Mixue.</p>
+            <p>Darah gue yang tadinya adem ayem langsung mendidih sampe ke ubun-ubun. Ini udah bukan sekadar nyebar aib. Ini udah produksi konten hoaks plus niat. Gue scroll komen, berharap ada sisa-sisa kemanusiaan. Yang ada malah spesies baru penghuni neraka.</p>
+            <p>Akun pertama, foto profilnya Gojo Satoru, pasti bocil wibu:</p>
+            <p>Gojomybae: "Wih, bermuka-dua ternyata. Muka doang malaikat, dalemnya iblis."</p>
+            <p>Refleks, jempol gue bales, "Lo ngaca, anjing. Muka lo aja pinjeman dari wattpad, belagu ngomentarin muka orang."</p>
+            <p>Akun kedua, namanya #PecintaSholawat, tapi PFP-nya cewek joget TikTok:</p>
+            <p>"Astagfirullah, akhir zaman. Mari kita doakan agar saudari N kembali ke jalan yang benar. Amin."</p>
+            <p>Gue bales lagi, "Jalan yang bener itu ganti foto profil lo dulu, jingan. Biar doa lo nggak nyasar ke FYP."</p>
+            <p>Perang pun dimulai. Gue, Rangga si penjual majalah, mendadak ganti profesi jadi admin cyber army tunggal buat Nazwa. Jempol gue yang kerjanya ngitung koin seribuan, sekarang sibuk ngetik sumpah serapah yang lebih panjang dari antrean BPJS.</p>
+            <p>Gue lawan satu, mereka nge-spawn seribu. Ini netizen apa amuba, Cok? Gue kasih fakta, mereka bales, "Halah, paling juga lu simp-nya. Belain aja terus sampe mampus!"</p>
+            <p>Komentar yang bikin gue pengen ngelempar HP ke bak sampah:</p>
+            <p>AkuNetralTapi...: "Gak mau mihak sih, tapi kalau udah viral gini, gak mungkin gak ada apa-apa, kan? No smoke without fire, guys."</p>
+            <p>Netral nenek kau salto! Itu bukan netral. Itu mental penonton bayaran yang ngarep dapet nasi kotak pas orang lain lagi disidang massa.</p>
+            <p>Gue sadar, ngelawan mereka satu per satu itu tolol. Kayak nyoba nguras lautan pake sendok. Musuh gue bukan cuma satu channel. Musuh gue adalah kerumunan goblok yang kelebihan kuota dan kekurangan akal sehat.</p>
+            <p>Malam itu, ditemani sisa kopi yang rasanya udah kayak kenangan pahit, gue cuma bisa natap layar. Di luar, dunia sepi. Di genggaman gue, neraka lagi ngadain flash sale, dan harga diri Nazwa diobral jadi bahan ketawaan.</p>
+            <p>Gue kalah. Telak. Malam itu gue resmi jadi mayat hidup yang lagi cicil kuota.</p>
+            <p>Dan ternyata, kekalahan gue semalem itu baru free trial. Versi premium subscription to hell dateng di hari-hari berikutnya, di arena sirkus paling goblok di jagat maya: channel YouTube tadi yang namanya... anjing, sarkas banget: "Satu Keadilan".</p>
+            <p>PFP-nya udah diganti tangan ngepal megang timbangan, tapi font-nya kayak stiker di angkot: "Keadilan Itu Buta, Makanya Kita Bantu Melek." Melek ndasmu, Cok.</p>
+            <p>Channel ini bukan kaleng-kaleng. Niat, anjir. Videonya pake animasi, grafiknya rapi, backsound-nya lagu-lagu senja biar dapet vibe kontemplatif palsu. Dan suaranya? Bukan lagi mbak-mbak Google. Ini suara cowok, deep, tenang, sok-sokan kayak narator film dokumenter tentang konspirasi alien.</p>
+            <p>Video pertamanya, judulnya bikin mual: "MEMBEDAH FENOMENA 'N': MALAIKAT DENGAN AGENDA TERSEMBUNYI?"</p>
+            <p>"Mari kita kaji bersama," kata si suara sok bijak itu. "Ada pola yang menarik dari setiap cyberbullying di sekolah ini. Selalu ada satu nama yang muncul sebagai korban, namun di balik layar, dialah yang paling diuntungkan. Siapakah dia?"</p>
+            <p>Kolom komentarnya langsung jadi tempat penampungan pengungsi dari neraka. Gue, dengan sisa baterai kewarasan, nyebur lagi ke kubangan itu pake akun alter gue yang udah boncos, "@BukanUrusanBapaklo".</p>
+            <p>Komen pertama, PFP member aespa: WinterMyLuv: "Sedih bgt nontonnya 😭 Ternyata cewek diem itu lebih bahaya ya, guys. Beda sama idolaku, tulus luar dalem."</p>
+            <p>Jempol gue yang udah keram langsung bales. @BukanUrusanBapaklo: "Halah, bacot. Bias lo kalo beli seblak juga nawar goceng, nggak usah sok paling tau ketulusan orang. Mending lo urusin tuh fanwar, lebih produktif."</p>
+            <p>Komen kedua, dari akun yang isinya postingan dakwah tapi kelakuannya setan: HijrahYukKawan: "Inilah bukti bahwa topeng manusia bisa lebih menipu daripada apa pun. Semoga kita semua dijauhkan dari fitnah seperti ini."</p>
+            <p>Fitnah jidat kau retak!</p>
+            <p>@BukanUrusanBapaklo: "Lo ngetik 'fitnah' sambil nyebarin fitnah. Sehat, Bro? Jangan-jangan pas lo hijrah, akhlak lo ketinggalan di kehidupan lama." Gue teken "balas". Puas. Gue pikir, dengan satu ulti-roasting ke akun dakwah palsu, orang-orang bakal melek.</p>
+            <p>Gobloknya gue. Ternyata gue bukan ngelawan orang. Gue lagi nyiram sebotol air ke hutan yang lagi kebakaran. Yang ada, apinya makin gede.</p>
+            <p>Komen gue itu kayak peluit dimulainya tawuran massal. Di bawah balasan gue, muncul notifikasi yang jumlahnya lebih banyak dari dosa politisi. Bukan lagi balasan satu-satu. Ini udah invasi. Ribuan avatar anime, bocil pake PFP Free Fire, sampe emak-emak penggemar sinetron, semuanya turun gunung.</p>
+            <p>GusionMyLop: "@BukanUrusanBapaklo Bacot anjing! Lo pasti temennya si N ya? Keliatan dari cara lo ngebela! SOLIDARITAS SESAT!"</p>
+            <p>AdeknyaWindah: "@BukanUrusanBapaklo Sok keras lo kontol. Palingan juga lo aslinya bocil epep yang kalo kalah nyalahin sinyal."</p>
+            <p>BundaCintaDamai: "@BukanUrusanBapaklo Astagfirullah, mulutnya dijaga ya, dek. Kok kasar sekali sama akun dakwah? Gak diajarin sopan santun sama orang tuanya?"</p>
+            <p>Anjing. Ini kolom komentar udah jadi crossover antara server Discord, grup arisan, sama turnamen debat kusir tingkat kelurahan. Otak mereka kayaknya udah terkontaminasi sama video-video brainrot,scroll, ketawa, scroll, nge-judge, scroll, lupa.</p>
+            <p>Komentar cerdas gue yang tadi... sekarang tenggelam. Kalah sama spam emoji badut 🤡, stiker "Anda Siapa Menilai Saya?", dan pertanyaan-pertanyaan goblok kayak, "Kak, spill dong IG-nya si N, mau gue hujat."</p>
+            <p>Jempol gue udah gemeteran, bukan karena takut, tapi karena nahan emosi. Gue balesin satu-satu.</p>
+            <p>Gue bales si Gusion: "Gue bukan temennya, gue cuma alergi sama kebodohan. Kayaknya lo overdosis dua-duanya."</p>
+            <p>Gue bales adeknya Windah: "Daripada nyalahin sinyal, mending lo salahin sistem pendidikan yang ngelolosin orang kayak lo."</p>
+            <p>Dan buat si Bunda: "Bu, sopan santun itu nggak berlaku buat orang munafik. Mending ibu urusin tuh resep opor, bentar lagi Lebaran."</p>
+            <p>Hasilnya? Komentar gue yang itu juga lenyap, ditimpa sama ribuan balasan lain. Udah kayak perang semut. Gue ngerasa kayak Don Quixote yang lagi nyerang kincir angin, tapi kincir anginnya ada jutaan dan semuanya bisa ngetik "Wkwkwk."</p>
+            <p>Gue nyerah. Fisik gue masih di depan laptop, tapi mental gue udah di UGD. Gue buka WA. Tangan gue gemeteran ngetik nama Arkan.</p>
+            <p>Gue: "Kan, tolong. Back-up gue, Cok." Gue: "Gue udah nggak kuat. Ini bukan perang, ini pembantaian orang goblok." Gue: "Kolom komentar channel 'Satu Keadilan'. Cek aja. Lo bakal liat evolusi kebodohan manusia secara live."</p>
+            <p>Gak lama, Arkan bales. Singkat, padat, kayak biasa. Arkan: "Copy that. Gue handle bacotannya. Lo fokus lacak IP address si bajingan itu. Skenario satunya lagi... kita doxxing balik sampe dia pindah negara."</p>
+            <p>Seketika itu juga, Tim Pahlawan Kesiangan (Divisi Digital) resmi terbentuk. Gue jadi tim investigasi bawah tanah, si Arkan jadi juru bicara sekaligus tameng badai tai.</p>
+            <p>Perang kami pun dimulai. Sebuah parodi tragis.</p>
+            <p>Di layar laptop gue: Gue lagi ngulik metadata video, nge-cross-reference watermark samar di animasi, nyari celah di kode embed channel-nya. Otak gue udah kayak CPU yang lagi di-overclock, panas, ngebul, tapi jalan terus. Gue ngerasa kayak detektif di film-film. Keren, misterius, selangkah lebih dekat dengan kebenaran.</p>
+            <p>Di layar HP Arkan (yang dia screenshot dan kirim ke gue buat laporan): Arkan: "Kepada Yth. Saudara @GojoMyBae, argumen Anda tidak memiliki dasar faktual. Menghubungkan kepribadian seseorang dengan perilakunya di masa lalu tanpa bukti konkret adalah sebuah kesalahan logika yang disebut 'Ad Hominem'. Mohon pelajari lagi dasar-dasar berdebat yang sehat."</p>
+            <p>GojoMyBae (bales): "Halah bacot, ribet amat lo kayak LKS. Gue gak peduli, yang penting si N itu JALANG!"</p>
+            <p>Gue liat screenshot itu sambil nepok jidat. Usaha Arkan itu kayak nyoba ngajarin monyet cara main catur. Monyetnya cuma bakal ngambilin bidaknya terus dilempar ke muka lo.</p>
+            <p>Screenshot lain dari Arkan: Arkan: "Untuk @PecintaSholawat, Islam mengajarkan kita untuk Tabayyun, atau verifikasi berita. Menyebarkan sesuatu yang belum pasti kebenarannya adalah fitnah, dan dosanya lebih besar dari pembunuhan."</p>
+            <p>PecintaSholawat (bales): "Heh, jangan bawa-bawa agama ya, kafir! Gue cuma menyuarakan keresahan umat!"</p>
+            <p>Gue ngakak miris. Si Arkan udah pake dalil, si goblok malah ngeluarin kartu takfir.</p>
+            <p>Malam itu, gue sama Arkan kayak dua orang idiot yang nyoba madamin kebakaran hutan pake pistol air. Gue sibuk nyari sumber api, Arkan sibuk nyipratin air ke daun-daun yang udah jadi arang.</p>
+            <p>Gue nemu petunjuk kecil: video-videonya di-upload dari jaringan internet yang IP-nya dinamis, tapi selalu di rentang waktu yang sama: antara jam 1 pagi sampe jam 3 pagi. Waktu di mana orang normal tidur, dan psikopat bekerja. Dan yang lebih aneh, beberapa kali upload-nya jeda, persis pas Zidan besoknya nggak masuk sekolah karena "sakit".</p>
+            <p>Gue kirim temuan gue ke Arkan. Gue: "Kan, Zidan sus. Polanya cocok."</p>
+            <p>Arkan (bales 10 menit kemudian): "Gue tau. Tapi bukti lo masih circumstantial. Gak cukup buat ngebakar dia di depan umum. Sementara itu... di sini makin kacau. Ada yang baru aja bikin fanpage 'Gerakan Anti-N', anggotanya udah 200 orang. Isinya meme muka Nazwa semua."</p>
+            <p>Anjing. Gue sama Arkan kalah telak.</p>
+            <p>Kami berdua online sampe subuh. Gue nggak nemuin bukti kuat. Arkan cuma berhasil bikin 10 orang di-block, tapi 1000 orang baru dateng. Usaha kami itu... sia-sia, lucu, sekaligus menyakitkan. Kayak nonton Stand Up Comedy di acara pemakaman.</p>
+            <p>Pagi itu, pas adzan subuh, gue tutup laptop. Badan gue pegel, mata perih, hati ambyar. Di luar jendela, langit mulai terang. Tapi di dunia gue, semuanya makin gelap. Dan yang paling parah? Gue tau, di kamarnya, Nazwa juga nggak tidur. Bedanya, dia nggak perang. Dia lagi dihajar habis-habisan, sendirian. Tanpa tameng, tanpa suara. Dan gue... gue gagal jadi perisainya.</p>
+            <p>Kekalahan gue dan Arkan di kolom komentar itu efeknya kayak radiasi nuklir. Gak langsung meledak, tapi pelan-pelan ngerusak semua yang ada di sekitarnya. Sekolah jadi neraka versi sunyi.</p>
+            <p>Nasib Azka: Dia jadi kayak hantu yang tiba-tiba dapet surat pengampunan dosa. Anak-anak yang tadinya ngelemparin dia pake tatapan sinis, sekarang malah ngasih dia permen. "Ka, sorry ya, Bro. Ternyata lo cuma korban," kata Satria sambil ngasih Kopiko, seolah-olah permen kopi bisa ngehapus dosa fitnah mereka. Azka, si badut kelas, sekarang jadi simbol "korban kezaliman" yang bikin semua orang mendadak jadi aktivis HAM dadakan. Ironis, anjing.</p>
+            <p>Nasib Nazwa: Ini yang paling parah. Dia nggak lagi dihujat di grup WA. Nggak ada lagi yang terang-terangan nyindir. Semuanya main halus, main belakang, lebih licik, lebih setan. Dia jadi Pasien Karantina. Setiap dia masuk kelas, obrolan yang tadinya rame langsung diem, diganti suara batuk-batuk canggung. Kalo dia jalan di koridor, anak-anak lain langsung minggir, pura-pura sibuk sama HP, seolah Nazwa itu sinyal 5G yang bisa nyedot kuota mereka kalo terlalu deket.</p>
+            <p>Sirkelnya sendiri, Naila, Keyla, Hana, masih semeja sama dia, tapi udah kayak rapat dewan direksi yang lagi bahas pemecatan CEO. Dingin, formal, nggak ada lagi tawa. "Naz, ngerjain tugas biologi di mana?" tanya Keyla, suaranya datar. "Di rumah gue aja," jawab Nazwa pelan. "Oh, yaudah. Nanti gue sama Hana aja deh, takut ngerepotin," bales Keyla cepet, sambil ngelirik temen-temennya yang lain. Nyesek, Cok. Ditolak secara halus itu lebih sakit daripada ditonjok langsung.</p>
+            <p>Gue cuma bisa liat dari jauh. Pengen nyapa, pengen ngomong, "Naz, lo nggak sendirian." Tapi gue tau, tatapan dia yang selalu menghindar itu udah jadi jawaban: "Jangan deket-deket gue, Rang. Lo cuma bikin semuanya makin runyam."</p>
+            <p>Gue jadi pengamat bisu dari penderitaan dua orang: Azka yang tiba-tiba jadi suci, dan Nazwa yang pelan-pelan dibunuh pake keheningan.</p>
+            <p>Dua Minggu Kemudian... Gue kira, seiring waktu, drama ini bakal ilang kayak ingatan tentang rumus Phytagoras. Gue salah. Ternyata, selama dua minggu itu, video-video dari channel "Satu Keadilan" nggak mati. Mereka cuma lagi "inkubasi" di HP orang-orang. Kayak virus.</p>
+            <p>Ledakannya dimulai dari satu orang, di luar sekolah. Ada anak dari SMP sebelah, sebut aja namanya Rian. Dia nggak sengaja nemu video itu karena algoritma YouTube yang kadang-kadang secerdas itu. Dia nonton. Dia kaget. Dia ngerasa dapet pencerahan.</p>
+            <p>Rian: "Anjir, gila. Ada drama ginian di sekolah tetangga."</p>
+            <p>Dia nggak mikir panjang. Dia share link itu ke Instagram story-nya dengan caption: "Buat yang suka cewek polos, ati-ati. Kadang dalemnya lebih busuk dari riwayat google sendiri. #SatuKeadilan."</p>
+            <p>Followers-nya Rian ada 500. Anggap aja 50 orang yang liat story-nya nge-klik link itu. Dari 50 orang itu, 10 orang ngerasa relate karena pernah diselingkuhin, 5 orang emang hobi nyebar aib, dan sisanya cuma iseng. Mereka nge-share lagi. Ke grup WA alumni SD. Ke grup mabar. Ke pacar mereka. Boom. Dalam semalam, "Nazwa" bukan lagi gosip lokal sekolah gue. Dia jadi bahan omongan se-kecamatan.</p>
+            <p>Bagaimana gue tau? Karena besoknya di kelas, Bunga, salah satu temen sekelas yang paling update soal gosip, lari-lari masuk kelas sambil nunjukin HP. "GAIS, GAIS, LIAT DEH! SEPUPU GUE YANG SEKOLAH DI SMP HARAPAN BANGSA NGE-CHAT GUE!"</p>
+            <p>Dia nunjukin chat-nya: Sepupu Bunga: "Bung, cewek yang namanya Nazwa di sekolah lo itu beneran psycho ya? Di sekolah gue lagi rame banget ngomongin dia. Katanya dia hacker yang suka doxxing orang?"</p>
+            <p>Satu kelas langsung hening, terus semua mata otomatis ngelirik ke... Nazwa. Yang lagi diem di pojok, pura-pura fokus ke buku Fisika yang halamannya nggak dia balik sama sekali selama sepuluh menit. Obrolan di kelas langsung jadi kayak bisikan setan. Bukan lagi cuma gosip. Ini udah jadi fact-checking versi kerumunan. Mereka nggak lagi nanya "bener nggak ya?", tapi "sejauh apa kebenarannya?". Dan di sinilah pengkhianatan paling halus dimulai.</p>
+            <p>Siang itu, pas jam istirahat, gue liat pemandangan yang bikin lambung gue serasa diaduk. Naila, yang dulu paling vokal ngebela Nazwa, sekarang lagi ngobrol sama Luna dan gerombolannya di deket tangga. Gue nggak sengaja denger obrolan mereka pas mau ke kantin.</p>
+            <p>Luna: "Gila, jadi beneran ya si Nazwa itu... licik banget."</p>
+            <p>Naila: (diam sejenak, suaranya pelan) "Gue... gue nggak tau lagi, Lun. Gue bingung. Semua bukti ngarah ke dia."</p>
+            <p>Luna: "Ya iyalah! Makanya lo jangan deket-deket dia lagi, entar nama lo ikut jelek."</p>
+            <p>Naila nggak nge-iya-in, tapi juga nggak ngebantah. Keheningannya itu udah jadi jawaban. Dia udah nyerah. Tembok pertahanan terakhir Nazwa dari dalem sirkelnya sendiri... udah retak.</p>
+            <p>Gue udah nggak tahan. Gue cabut ke atap sekolah, tempat paling pas buat orang-orang yang pengen ngomong sama langit karena udah muak ngomong sama manusia. Ternyata Arkan udah di sana, nyender di tembok sambil natap lapangan yang kosong. "Parah ya," kata gue, tanpa basa-basi.</p>
+            <p>"Lebih dari parah," jawab Arkan, matanya masih lurus ke depan. "Ini udah ngga lagi soal fitnah. Ini udah jadi bahan percayaan orang tolol. Dan ngelawan keyakinan itu lebih susah daripada ngelawan fakta."</p>
+            <p>Dia ngeluarin HP-nya. Nunjukin sesuatu. Grup chat alumni SD. Isinya? Link video Satu Keadilan yang di-share sama Adit, salah satu temen cowok yang dulu paling kalem. Adit: "Temen-temen, nonton ini deh. Biar kita semua 'melek'. Ternyata orang yang kita kira baik, belum tentu beneran baik."</p>
+            <p>Di bawahnya, Ibrahim dan Akbar nimpalin pake emoji api. 🔥🔥🔥</p>
+            <p>Gue ngepalin tangan. "Bahkan anak-anak yang dulu nggak peduli sekarang ikut jadi kompor, Kan."</p>
+            <p>"Karena jadi kompor itu gampang, Rang," kata Arkan. "Nggak butuh otak. Cuma butuh jempol sama rasa iri yang disembunyiin. Lo liat kan? Mereka semua diem-diem mungkin pernah ngerasa 'kalah' dari Nazwa. Entah karena nilai, popularitas, atau sekadar karena Nazwa disukain banyak orang."</p>
+            <p>Gue diem. Logika Arkan emang setajam silet.</p>
+            <p>"Dan yang paling brengsek dari semua ini?" lanjut Arkan, kali ini natap gue. "Si pelaku utama itu menang telak. Dia nggak perlu ngotorin tangannya lagi. Massa yang ngelakuin sisanya."</p>
+            <p>"Zidan," desis gue.</p>
+            <p>"99.9%," jawab Arkan. "Dan kita nggak bisa ngapa-ngapain."</p>
+            <p>Rasa nggak berdaya itu, anjing, lebih nyiksa daripada dihina langsung. Rasanya kayak tangan lo diiket sementara lo nonton orang yang lo sayang lagi ditenggelemin pelan-pelan ke lumpur hisap.</p>
+            <p>Pulang sekolah, pas gue mau ke parkiran, gue liat Nazwa jalan sendirian. Dari belakang, Keyla dan Hana, dua sisa sirkelnya, nyusul. Gue kira mereka mau nemenin. Salah.</p>
+            <p>"Naz," panggil Keyla. Nazwa noleh, ada sedikit harapan di matanya.</p>
+            <p>"Besok... kita kerja kelompok di rumah gue aja ya. Cuma berdua sama Hana. Biar... lebih fokus."</p>
+            <p>Fokus. Kata paling sopan untuk bilang: "Lo nggak kita ajak."</p>
+            <p>Nazwa diem, nggak ngomong apa-apa. Dia cuma ngangguk pelan, terus lanjut jalan, langkahnya makin cepet. Bahunya sedikit bergetar.</p>
+            <p>Hari itu, gue liat dia bener-bener sendirian. Sirkelnya ancur. Temen-temennya jadi musuh dalam selimut. Dan reputasinya jadi sampah yang disebar ke seluruh penjuru kota. Di depan mata gue sendiri, Nazwa bukan lagi cuma dikucilkan. Dia resmi jadi orang asing di dunianya sendiri. Musuh publik yang dibangun di atas ribuan share dan dipercaya oleh ratusan ribu otak idiot. Dan korbannya? Satu cewek yang sekarang berdiri di tengah keramaian, tapi ngerasa lebih sepi daripada kuburan di tengah malam. Semua tatapan mengarah ke dia, bukan lagi kayak ke terdakwa. Tapi kayak ke monster yang udah divonis bersalah, bahkan sebelum sidangnya dimulai.</p>
+            <p>25 Maret. Bulan Puasa. Harusnya jadi waktu buat nyari pahala, bukan nyari dosa. Tapi kayaknya, setan-setan digital lagi ngadain diskon besar-besaran, dan seisi sekolah borong semua paketnya.</p>
+            <p>Channel Satu Keadilan meledak. Bukan lagi cuma viral se-kecamatan, ini udah jadi tontonan wajib anak-anak SMP se-antero kota. Videonya dire-upload di TikTok dengan backsound jedag-jedug, di-share di Facebook sama ibu-ibu yang kurang kerjaan, dan potongan-potongannya dijadiin meme di Twitter. Nazwa resmi jadi selebriti neraka. Gue sama Arkan udah di ambang batas kewarasan.</p>
+            <p>"Kan, ini udah nggak masuk akal," kata gue lewat chat WA yang isinya cuma keluhan kami berdua. "Kita kayak nyoba nambal kapal Titanic pake lakban."</p>
+            <p>"Lebih parah," bales Arkan. "Kita nyoba nambal Titanic pake lakban, tapi sambil dilemparin batu sama penumpang lainnya."</p>
+            <p>Dan pas kami pikir situasinya nggak bisa lebih buruk lagi... ternyata bisa.</p>
+            <p>Muncul channel YouTube baru. Kali ini, namanya lebih absurd dan lebih berbahaya: Firman K-POP.</p>
+            <p>Anjing. Gue liat profilnya aja udah pengen istighfar. PFP-nya foto Jungkook BTS diedit pake Heiligenschein (lingkaran suci malaikat), dan bannernnya tulisan, "Oppa adalah satu-satunya juru selamat. Agama lain hanya mitos."</p>
+            <p>Ini bukan lagi soal fitnah biasa. Ini udah main SARA. Dan di video terbaru mereka, yang judulnya "MEMBONGKAR PENISTA OPPA: 'N', SI PENGHUJAT YANG HARUS DIMUSNAHKAN," mereka nggak cuma ngarang cerita. Mereka melakukan hal paling biadab: mencantumkan nomor HP pribadi Nazwa di deskripsi video. Lengkap dengan caption: "Ini nomor si penghujat. Mari kita beri dia pelajaran agar dia tau siapa Tuhan kita yang sebenarnya. Tunjukkan kekuatan Army. Spam sampai dia tobat."</p>
+            <p>Brengsek. Ini bukan lagi kerjaan Zidan, gue yakin. Zidan itu licik, tapi permainannya halus. Ini... barbar. Ini kerjaan gerombolan netizen goblok yang udah kemakan fitnah Satu Keadilan, terus bikin gerakan sendiri, nyampur-nyempurin drama sekolah sama fanatisme buta mereka. Ini adalah monster yang lahir dari monster.</p>
+            <p>Gue langsung telepon Arkan. "Kan, lo liat?" suara gue gemeteran. "Udah. Dan HP Nazwa pasti lagi meledak sekarang. Spam, virtex, telepon dari nomor nggak dikenal... Semuanya," jawab Arkan, suaranya dingin tapi gue tau dia juga panik. "Kita berdua nggak akan cukup, Rang. Serangannya udah dari segala penjuru. Kita butuh bantuan."</p>
+            <p>Gue tau siapa yang dia maksud. "Naila," desis gue. "Dia udah goyah, Kan. Dia udah mulai percaya sama omongan mereka." "Makanya kita harus yakinin dia," kata Arkan. "Cuma dia yang punya pengaruh di kalangan cewek-cewek. Cuma dia yang suaranya masih mungkin didenger. Kita harus bikin dia liat gambaran besarnya."</p>
+            <p>Sore itu, setelah drama panjang dan ribuan alasan, kami akhirnya berhasil ngajak Naila ketemu di warung kopi deket sekolah yang sepi, tempat yang terlalu nggak aesthetic buat anak-anak populer. Naila dateng, mukanya kaku, tangannya dilipet di dada. "Mau ngomong apa?" tanyanya ketus.</p>
+            <p>Arkan langsung buka laptopnya. "Nail, gue tau lo bingung. Lo pikir Nazwa itu dalangnya, atau minimal dia pantes dapet ini. Liat ini dulu."</p>
+            <p>Arkan nunjukkin semua yang udah kita temuin. Timeline serangan digital. Jejak IP address dinamis yang aneh. Pola absen Zidan yang selalu sinkron. Screenshot galeri HP Zidan yang pernah Arkan liat. Bukti bahwa channel pertama dibayar orang luar. Semuanya.</p>
+            <p>Naila diem, matanya nonton semua data itu dengan serius. "Ini semua masih... kebetulan, kan?" katanya, suaranya masih ragu.</p>
+            <p>Gue yang dari tadi diem, akhirnya buka suara. "Nail," kata gue pelan. "Lo temennya Nazwa dari kecil. Lo kenal dia lebih dari siapa pun. Coba lo pikir. Apa Nazwa yang lo kenal itu orang yang bisa ngelakuin ini semua?"</p>
+            <p>Gue lanjutin lagi. "Gue mungkin si 'Bule Pembela' yang aneh. Arkan mungkin terlalu logis. Tapi lo... lo itu temennya. Lo inget nggak pas di acara perpisahan SD, gimana Nazwa ketawa lepas pas Azka nulis pesan konyol buat dia? Apa orang kayak gitu pantes dihancurin kayak gini?"</p>
+            <p>Naila diem lama banget. Tangannya yang tadinya dilipet di dada, sekarang turun lemes ke samping badannya. Dia natap layar laptop Arkan yang isinya grafik dan data, terus natap gue yang mukanya udah kayak campuran antara kurang tidur sama kebanyakan ngirup asap knalpot. "Gue... gue nggak tau lagi harus percaya sama siapa," katanya, suaranya pecah. "Satu sisi, semua bukti di internet ini bikin dia keliatan kayak monster. Tapi di sisi lain..."</p>
+            <p>Dia berhenti, narik napas dalem-dalem, kayak mau nyelam. "Gue inget banget," lanjutnya. "Waktu kelas tujuh, gue pernah lupa bawa duit jajan. Seharian gue lemes, nahan laper, malu mau minta. Lo tau siapa yang tiba-tiba dateng pas istirahat kedua? Iya si Nazwa. Dia nyodorin setengah roti bakarnya ke gue, terus bilang, 'Nih, makan. Lo dari tadi mukanya kayak kanebo kering, belum disiram.' Dia bahkan nggak nanya kenapa gue nggak jajan. Dia cuma... ngasih."</p>
+            <p>Naila ngusap matanya yang mulai basah. "Dia itu orang paling nggak enakan di dunia. Pernah sepatunya keinjek sama adek kelas sampe putihnya jadi item, dia malah bilang, 'Eh, maaf ya, kaki gue ngalangin jalan.' Goblok, kan? Orang kayak gitu... mana mungkin punya niat jahat buat ngehancurin seisi sekolah?"</p>
+            <p>Dia ketawa, tapi tawa yang isinya tangisan. "Dia nggak punya musuh, Cok. Sumpah. Musuh dia paling banter cuma kucing oren yang suka nyolong ikan di depan rumahnya. Dia pernah nangis gara-gara nggak sengaja nginjek semut. Terus kalian mau bilang dia dalang dari semua ini? Nggak masuk akal. Otak gue nggak nyampe."</p>
+            <p>Keheningan di antara kami bertiga jadi berat. Isinya cuma suara kipas angin warung kopi yang bunyinya kayak orang lagi bengek. Arkan nutup laptopnya pelan. "Justru karena dia nggak punya musuh, dia jadi target yang sempurna, Nail."</p>
+            <p>Gue nimpali. "Karena kalo orang baik yang dihancurin, semua orang bakal lebih gampang percaya. 'Nggak mungkin kan orang sebaik dia kena fitnah kalo nggak ada apa-apa?'. Itu logika sesat yang dipake sama si pelaku."</p>
+            <p>Naila natap kami berdua bergantian. Keraguan di matanya pelan-pelan berubah jadi... api. Api kemarahan yang sama kayak yang gue dan Arkan rasain. Aliansi kami yang tadinya retak kayak layar HP abis jatoh, sekarang kayak... disambung lagi pake lem setan. Mungkin nggak bakal sempurna kayak dulu, tapi cukup kuat buat dipake perang sekali lagi.</p>
+            <p>"Oke," kata Naila, nadanya udah beda. Bukan lagi ketus, tapi dingin dan fokus. "Gue nggak peduli lagi siapa pelakunya. Gue nggak peduli sama drama di grup. Gue capek jadi penonton. Sekarang, kita ngapain?"</p>
+            <p>Arkan ngelirik gue. "Rencana?"</p>
+            <p>Gue narik napas. Otak gue yang tadinya isinya cuma umpatan, sekarang mulai nyusun strategi. Ini bukan lagi soal bales dendam ke Zidan. Belum. Timing-nya salah. Sekarang fokusnya cuma satu.</p>
+            <p>"Kita nggak bisa menangin perang ini di dunia maya," kata gue. "Udah telat. Apapun yang kita lakuin, netizen bakal punya narasi sendiri. Satu-satunya cara... adalah masuk ke dunianya Nazwa."</p>
+            <p>Arkan sama Naila bingung. "Maksud lo?" tanya Naila.</p>
+            <p>Gue natap mereka serius. "Kita harus bikin dia tau, kalau di tengah badai tai ini, masih ada tiga orang idiot yang percaya sama dia. Kita harus bikin dia ngomong. Apapun yang terjadi di kepalanya, apapun yang dia rasain... dia nggak boleh ngelewatin ini sendirian."</p>
+            <p>Arkan ngangguk pelan. "Oke. Logis. Kita butuh komunikasi langsung. Tapi gimana caranya? WA-nya udah kayak nomor mati."</p>
+            <p>Di situ, gue senyum tipis. Senyum paling misterius yang bisa gue keluarin. Gue inget kado itu. Gue inget semua hal-hal kecil yang pernah kami lakuin. Ada satu cara. Cara yang old school, yang mungkin udah dilupain semua orang.</p>
+            <p>"Gue punya cara," kata gue. "Cara yang nggak bakal bisa dilacak sama si Satu Keadilan atau sekte pemuja Oppa itu."</p>
+            <p>Malam itu, bulan puasa terasa lebih panjang dari biasanya. Kami bertiga bukan lagi cuma trio pembela. Kami jadi... tim SAR darurat buat satu jiwa yang lagi tenggelam. Kami nggak punya jaminan bakal berhasil. Tapi kami punya sesuatu yang lebih penting dari kemenangan. Kami punya... harapan. Walaupun harapan itu setipis kertas minyak gorengan. Perang melawan kebodohan ini... ronde keduanya baru aja dimulai. Dan kali ini, medannya bukan lagi kolom komentar. Tapi hati seorang teman.</p>
+            <p>Berita soal Nazwa itu kayak Covid-19 varian paling anyar: nyebarnya cepet, gejalanya bikin pusing, dan semua orang mendadak jadi ahli tanpa pernah sekolah kedokteran. Channel Satu Keadilan jadi tontonan wajib. Dan di tengah badai itu, muncul spesies baru: Detektif TikTok.</p>
+            <p>Anak-anak gabut dari sekolah lain, yang otaknya penuh teori konspirasi hasil nonton film detektif sambil makan kuaci, mulai bikin konten "analisis mendalam". Salah satu videonya, dari akun @KopiSianida_Official, viral. "OKE GAIS, JADI GUE NEMU POLA!" kata si bocah, sambil nunjuk-nunjuk papan tulis yang isinya benang merah acak-adut kayak sarang laba-laba abis kena gempa. "Lihat! Akun palsu pertama pake nama Azka. Insiden Zoom pake nama Della. Keduanya temen sekelas 'N'. Tapi, Azka korban pertama, artinya dialah kunci dari semua ini! Jadi, kesimpulan gue... pelakunya bukan 'N'. Pelakunya adalah orang yang dendam sama Azka, dan dia sengaja pake nama Nazwa buat jadi umpan!"</p>
+            <p>Goblok. Logikanya lompat-lompat kayak main engklek di atas trampolin. Tapi netizen? Percaya. Kolom komentarnya rame: "WAH IYA BENER JUGA!" "GILA, DETEKTIF CONAN VERSI LOKAL!" "FIX, KASIAN BANGET SI AZKA, UDAH DITUDUH, TERNYATA DIA KORBAN UTAMA."</p>
+            <p>Opini massa yang tadinya ngehajar Nazwa, sekarang muter arah kayak mobil U-Turn di jalan tol. Mereka nggak lagi ngehujat Nazwa. Mereka... ngasihani dia.</p>
+            <p>@BocilKematian: "Kasihan ya si N, cuma dijadiin alat buat ngehancurin si A. Emang persaingan cowok tuh se-toxic itu ya." @PecintaDamai: "Jadi selama ini kita salah? Ya ampun, kita harus minta maaf sama Nazwa dan Azka! #JusticeForAzkaAndNazwa"</p>
+            <p>Gue sama Arkan cuma bisa nepok jidat. Ini bukan lagi soal bener atau salah. Ini udah soal narasi mana yang paling seru buat diikuti. Dan hari itu... Nazwa nggak masuk sekolah. Entah karena sakit, muak, atau lagi hibernasi dari kebodohan semesta.</p>
+            <p>Dan hari itu... Nazwa nggak masuk sekolah. Besoknya... dia juga nggak masuk. Hari ketiga... bangkunya masih dingin, kosong, kayak hati gue.</p>
+            <p>Anjing. Tiga hari. Tiga hari itu rasanya kayak tiga tahun di neraka. Setiap pagi, rutinitas gue jadi ada tambahan misi: pas nganterin Natasya, gue sengaja lewat depan komplek rumahnya. Sepeda butut gue kayuh pelan-pelan, mata gue ngawasin gerbang rumahnya yang segede gaban itu, berharap ada keajaiban. Mungkin gue bakal liat dia lagi nyiram bunga, atau sekadar buka jendela. Tapi nggak ada. Rumah itu diem, bisu, kayak habis ditinggal penghuninya ziarah ke planet lain.</p>
+            <p>Pikiran gue langsung jadi liar. Udah kayak skenario film horor paling klise. Jangan-jangan dia beneran sakit parah? Jangan-jangan dia dikurung sama bokapnya? Atau jangan-jangan... shit, gue bahkan nggak berani ngelanjutin pikiran itu.</p>
+            <p>Malamnya, gue nggak bisa tidur. Gue buka galeri HP. Ada satu foto candid Nazwa yang berhasil gue ambil pas acara perpisahan SD. Fotonya nge-blur, angle-nya miring, kayaknya diambil pas gue lagi keselek cilok. Tapi di foto itu, dia lagi ketawa. Ketawa yang beneran lepas, matanya segaris, kayak bulan sabit. Gue tatap foto itu lama banget.</p>
+            <p>"Naz, lo di mana, gue kangen..." gumam gue ke layar HP yang udah retak. "Minimal kasih kabar kek. Nggak usah bales chat gue, cukup bikin story IG gambar titik item juga gue udah bersyukur. Setidaknya gue tau lo masih bisa megang HP, bukan lagi dipegangin selang infus."</p>
+            <p>Rasa khawatir ini aneh, Cok. Bikin perut melilit, tapi juga bikin gue pengen ngelakuin hal-hal goblok. Gue sempet kepikiran buat nyewa drone murahan di Shopee buat ngintip dari atas rumahnya. Atau nyamar jadi tukang paket, nganterin kardus kosong biar bisa liat keadaan di dalem. Tapi gue sadar, gue ini Rangga, bukan James Bond versi gembel.</p>
+            <p>Gue cuma bisa lakuin satu hal: berdoa. Doa versi gue tapi. Gue nggak ngadep kiblat. Gue cuma duduk di pojokan kamar, meluk lutut, terus ngomong ke cicak di dinding.</p>
+            <p>"Cak... kalo lo ketemu Tuhan nanti malem, tolong sampein ya. Bilangin, ada satu cewek baik namanya Nazwa, lagi diserang segerombolan setan digital. Tolong jagain dia. Kalo bisa, kirimin dia sinyal WiFi yang kenceng biar dia bisa nonton drakor dan lupa sama masalahnya. Amin."</p>
+            <p>Absurd? Banget. Tapi cuma itu yang bisa gue lakuin. Seorang 'Bule Pembela' yang di dunia nyata nggak bisa berbuat apa-apa selain ngobrol sama reptil.</p>
+            <p>Pagi harinya, gue berangkat ke sekolah dengan perasaan campur aduk. Berharap, sekaligus takut. Berharap bangkunya udah keisi, tapi takut kalo bangku itu bakal kosong selamanya.</p>
+            <p>Di kelas, suasananya udah kayak talkshow pagi yang host-nya overdosis kafein. Semua orang ribut bahas teori baru ini. "Gila, kasian banget ya si Azka," kata Ridho. "Iya, Cok. Dia yang paling ancur berarti," timpal Izza. "Kasian Nazwa juga, dia cuma jadi tameng," tambah Nehan, sok bijak.</p>
+            <p>Tiba-tiba... BRAKK! Azka, yang dari tadi diem sambil ngunyah permen karet, naik ke atas kursi dan gebrak meja.</p>
+            <p>"WOY, DENGERIN GUE SEMUA!" teriaknya. Suaranya cempreng tapi penuh percaya diri. Mukanya serius, kayak caleg lagi kampanye di depan tiga orang. "Gue tau... selama ini gue yang jadi korban. Gue yang paling tersakiti di sini!" katanya dramatis. Beberapa anak cewek udah pasang muka 'aww, kasian'.</p>
+            <p>"TAPI!" lanjutnya, suaranya makin kenceng. "Ini bukan tentang gue! Ini tentang... KEADILAN! DAN TENTANG NAZWA!"</p>
+            <p>Gue sama Arkan nahan tawa. Ini apaan, anjir? Sumpah Pemuda versi gagal?</p>
+            <p>"NAZWA ITU NGGAK BERSALAH!" teriak Azka lagi. "Lo semua pikir pake otak dong! Masa iya dia ngejelekin dirinya sendiri? HAH?! SEMUANYA JEBAKAN!"</p>
+            <p>Beberapa anak mulai manggut-manggut. "Iya juga, ya..."</p>
+            <p>"Pelakunya aja yang udah gila! Mungkin... dia IRI SAMA KETAMPANAN GUE, DAN DIA PAKE NAZWA BUAT NGEHANCURIN GUE!"</p>
+            <p>BUAHAHAHAHAHAHAHAHAHA!!!! Satu kelas meledak ngakak. Gue dan Arkan ikut ketawa sampe perut kram. Si Ibrahim guling-guling, Akbar nepok-nepok meja sampe pulpennya mental. Ridho ketawanya sampe keselek ludah.</p>
+            <p>Pidato heroik Azka yang harusnya bikin haru, malah jadi stand-up comedy paling sukses abad ini. Azka panik. Mukanya merah padam. "K-Kenapa kalian ketawa?! Gue serius, anjing!" "Iya, Ka, serius," kata Izza sambil ngelap air mata. "Serius lucunya, hahaha!"</p>
+            <p>Tapi di tengah lautan tawa itu... gue liat Zidan. Dia nggak ketawa. Nggak senyum. Nggak pasang muka kagum. Dia cuma diem. Tatapannya lurus ke Azka, datar kayak tembok. Tatapan... aneh. Bukan tatapan orang yang nonton komedi. Tapi tatapan sutradara, yang lagi liat aktornya ngacoin skrip.</p>
+            <p>Tawa gue langsung padam. Gue nyenggol Arkan. "Kan, liat." Arkan ngikutin arah pandang gue. Dan untuk pertama kalinya, muka logis Arkan keliatan sedikit... ngeri. "Anjing," bisiknya. "Semua orang ketawa. Dia enggak."</p>
+            <p>Pagi itu, di tengah parodi paling goblok yang pernah ada, tawa di kelas belum juga berhenti. Azka udah turun dari kursi, mukanya campuran antara malu, marah, dan pengen nge-klaim asuransi jiwa. "Anjing lah lo semua! Gue niatnya baik!" gerutunya, sambil duduk di bangkunya, tapi malah didorong-dorong sama si Ridho yang masih ngakak. "Baik, Ka, baik banget! Gue sampe pengen nyumbang ginjal saking terharunya!" ledek Ridho.</p>
+            <p>Gerombolan Haikal dan Fathir di belakang malah lebih parah. "Woy, besok kalo ada pemilihan ketua OSIS, kita usung Azka!" teriak Haikal. "Visi misinya: memberantas kejahatan dengan stand up comedy!" "Anjir, mottonya apa tuh?" tanya Fathir. "Bersama Azka, kita wujudkan sekolah yang... penuh lawak!"</p>
+            <p>Kelas makin rame. Beberapa anak cewek, kayak Luna dan Bunga, bukannya kasian malah ngerekam diem-diem buat stiker WA. "Lumayan, buat nge-roasting anak sekolah sebelah," kata Luna.</p>
+            <p>Di tengah tsunami tawa itu, gue sama Arkan udah nggak fokus ke Azka. Mata kami terkunci pada satu anomali: Zidan. Dia masih diem, muka datar, seolah-olah dia lagi nonton siaran berita cuaca, bukan pertunjukan komedi dadakan. Gue nyenggol Arkan pelan. "Aneh, kan?" "Lebih dari aneh," bales Arkan, matanya nyipit. "Dia kayak... nggak ada di frekuensi yang sama. Atau jangan-jangan, frekuensi kita yang kerendahan buat nangkep sinyal otaknya."</p>
+            <p>Seketika, gue punya ide. Gue liat Naila lagi duduk di bangkunya, di samping kursi kosong Nazwa. Dia nggak ikut ngakak, cuma senyum tipis yang keliatan dipaksain. Dia keliatan bingung, sama kayak gue beberapa hari lalu. "Kan," bisik gue lagi. "Waktunya narik Naila ke tim investigasi kita."</p>
+            <p>Arkan ngangguk setuju. Gue ngambil napas, terus ngeluarin suara paling subtle yang bisa gue hasilin, yang kedengerannya kayak suara tikus lagi bersin. "Psstt... Nail!"</p>
+            <p>Naila noleh. Mukanya bingung. "Sini, Cok. Penting," gue ngasih isyarat pake kepala, nyuruh dia nyamperin kami di barisan belakang yang udah kayak zona demiliterisasi.</p>
+            <p>Naila, dengan ragu, akhirnya jalan ke arah kami, ngelewatin Izza yang masih megangin perutnya karena kebanyakan ketawa. "Apaan?" tanya Naila, suaranya masih ada nada waspada.</p>
+            <p>Gue nggak langsung ngomong. Gue ngelirik ke arah Zidan dulu, mastiin dia lagi sibuk natap tembok. Aman. "Nail, lo liat Zidan nggak?" tanya gue pelan. Naila ngerutin dahi. "Liat. Kenapa? Dia kan emang gitu dari dulu, kayak patung selamat datang yang lupa diisi batere." "Bukan itu," timpal Arkan. "Coba deh lo perhatiin. Dari semua drama ini, Azka, Della, Nazwa, ada satu orang yang nggak pernah ngasih reaksi apa-apa selain diem."</p>
+            <p>Naila masih keliatan bingung. "Ya... mungkin dia emang nolep aja? Nggak pedulian?"</p>
+            <p>Gue nyamber. "Nolep sama nggak punya emosi itu beda, Nail. Tadi, seisi kelas ngakak sampe mau mampus liat lawakan si Azka. Dia? Mukanya lurus aja. Kayak nonton tembok. Itu nggak normal."</p>
+            <p>"Gue nggak nuduh, ya," lanjut Arkan. "Ini cuma... observasi. Anak pendiem itu ada dua macem. Satu yang beneran pemalu. Satu lagi yang lagi sibuk nyusun rencana buat nguasain dunia. Dan gue... ngerasa getaran aneh dari dia."</p>
+            <p>Naila diem, otaknya mulai mikir. Dia ngelirik ke arah Zidan sekilas. "Tapi... apa buktinya?" tanya Naila lagi. "Belum ada," jawab gue jujur. "Makanya kita butuh lo. Lo kan cewek, mungkin bisa liat hal-hal yang gue sama Arkan nggak liat. Coba aja lo perhatiin dia. Apa dia sering ngeliatin Nazwa? Apa dia sering main HP diem-diem? Apa dia punya... teman-teman aneh di luar sekolah?"</p>
+            <p>Kami nggak maksa dia percaya. Kami cuma nanemin bibit keraguan. Karena buat ngelawan psikopat, kadang lo nggak butuh bukti. Lo cuma butuh cukup banyak orang yang mulai curiga ke arah yang sama. Naila natap kami berdua lama, terus ngangguk pelan. "Oke. Gue coba."</p>
+            <p>Dia balik ke bangkunya.</p>
+            <p>Saat itu, tawa di kelas udah mulai reda, diganti obrolan random soal game dan tugas. Tapi buat gue, Arkan, dan sekarang Naila, suasana udah beda. Kami bertiga jadi agen rahasia dadakan. Musuh kami masih misterius. Target kami cuma satu: nyari tau siapa setan yang lagi pake topeng manusia paling tebel di antara kami.</p>
+            <p>Perang ini... baru aja masuk babak baru. Babak penuh bisikan, tatapan curiga, dan observasi diam-diam. Dan kami bertiga, Trio Kwek Kwek versi intel gagal, siap buat mulai permainan.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const storyWrapper = document.querySelector('.story-wrapper');
+            if (storyWrapper) {
+                setTimeout(() => {
+                    storyWrapper.classList.add('visible');
+                }, 100);
+            }
+        });
+    </script>
+
+</body>
+</html>
